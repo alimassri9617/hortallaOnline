@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -216,7 +217,7 @@
 
     document.getElementById("addEventForm").addEventListener("submit", async (e) => {
       e.preventDefault();
-      await axios.post(`${API_BASE}/calendar`, { date: e.target.date.value, event: e.target.event.value });
+      await axios.post(`${API_BASE}/calendar`, { date: e.target.date.value, event: e.target.event.value, secret: e.target.secret.value });
       e.target.reset();
       loadCalendar();
     });
